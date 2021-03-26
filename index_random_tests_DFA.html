@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-compatible" content="ie=edge">
+  <title>Random Game Tests</title>
+<!--  <link href="styles.css" rel="stylesheet"> there is currently no style sheet -->
+  <script src="pseudo_random_script.js" defer></script>
+
+</head>
+
+
+<body>
+<p>Click this button to draw a random number sample from the N(0,1) probability distribution.</p>
+<button onclick="normal_btn_onclick()">Sample from N(0,1)</button>
+
+<br>
+<br>
+
+<p>Click the button to draw a random number sample from the LogNormal(0,1) probability distribution.</p>
+<button onclick="document.getElementById('result').innerHTML = rand_lognormal(0, 1)">Sample from LN(0,1)</button>
+
+<br>
+<br>
+
+<p>Click the button to draw a random number sample from the student-T(5) probability distribution.</p>
+<button onclick="document.getElementById('result').innerHTML = rand_student_t(5)">Sample from T(5)</button>
+<br><br>
+<br><br>
+
+<label for="numberToRepeat"> Input a number to generate a repeated number of random samples (from N(0,1)):</label>
+<input type="number" id="numberToRepeat" name="numberToRepeat" min="1"><br><br>
+<button onclick="randomSampleList_onclick()">generate repeated number of random samples (from N(0,1))</button>
+
+
+<div id="result"></div>
+
+</body>
+
+</html>
